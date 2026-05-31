@@ -1,3 +1,5 @@
+"""Telegram bot main package."""
+
 import os
 import sys
 from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
@@ -10,13 +12,13 @@ if not TOKEN:
     sys.exit(1)
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    """Sends a message with a 3-button reply keyboard layout."""
+    """Sends a message with a 2-button reply keyboard layout."""
     keyboard = [
         [KeyboardButton("Favorite Book")],
         [KeyboardButton("About the Book")]
     ]
     reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
-    
+
     await update.message.reply_text(
         "Choose an option from the keyboard below:", 
         reply_markup=reply_markup

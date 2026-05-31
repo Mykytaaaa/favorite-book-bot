@@ -13,7 +13,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the bot script
-COPY BookBot.py .
+COPY book_bot.py .
 
 # Run the bot
-CMD ["python", "BookBot.py"]
+CMD ["python", "book_bot.py"]
