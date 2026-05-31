@@ -1,3 +1,4 @@
+# pylint: disable=unused-argument
 """Telegram bot main package."""
 
 import os
